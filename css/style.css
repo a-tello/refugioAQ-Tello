@@ -1,0 +1,844 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    background-color: #ffffff;
+    opacity: 0.8;
+    /* background: repeating-linear-gradient( -45deg, rgba(96, 135, 87, 0.37), rgba(96, 135, 87, 0.37) 15px, #ffffff 15px, #ffffff 75px ); */
+ }
+
+
+html{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 62.5%;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+    font-size: 2rem;
+    padding: 1rem 3rem;
+}
+
+
+h1{
+    font-weight:bold;
+    font-size: 4rem;
+}
+
+ul ul, .alternativeIntroductionText{
+    display:none;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+
+/* BODY GRID*/
+
+.bodyGrid{
+    display: grid;
+    grid-template-areas:
+    "header" 
+    "main" 
+    "footer";
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+main{grid-area: main;}
+footer{grid-area: footer;}
+
+
+
+/*------------------------------------*/
+
+/* HEADER */
+
+
+.navBarList{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.navBarList li:hover{
+    background: linear-gradient(to top, rgb(220, 219, 219), #fff);
+}
+
+.donationBtn{
+    color: #ffffff;
+    padding: 0.7em 1.7em;
+    font-size: 1.8rem;
+    border-radius: 0.5em;
+    background: #e83155;
+    border: 1px solid #e83155;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 4rem;
+}
+.donationBtn img{
+    position: absolute;
+    margin-left: -3.5rem;
+    margin-top: -.5rem;
+}
+
+.hamburguerMenu{
+    display: none;
+}
+/*------------------------------------*/
+
+
+/* MAIN*/
+
+.mainGridHome{
+    display: grid;
+    grid-template:
+    "banner banner banner" auto
+    "info info info" auto 
+    ". articles ." auto
+    "sponsors sponsors sponsors" auto 
+    / 1fr 6fr 1fr;
+    justify-items: stretch;
+}
+
+.parallaxHome{
+    grid-area: banner;
+    background-image: url("../assets/images/bannerHome-min.jpg");
+}
+
+.introductionDiv{
+    grid-area: info;
+    text-align: center;
+    font-size: 2.5rem;
+    background-color: #629668;
+    color: white;
+    padding: 1.5rem;
+}
+
+.introdcutionText, .homeIntrodcutionText{
+    text-indent: 3rem;
+    text-align:justify;
+    padding: 2rem 4rem;
+}
+
+.articlesSection{grid-area: articles}
+
+.sponsorsSection{grid-area: sponsors;}
+
+.parallax {  
+  
+    height: 50vh;
+    width: 100%;
+
+  
+    background-attachment: fixed;
+  
+    background-position: center;
+  
+    background-repeat: no-repeat;
+  
+    background-size: cover;
+
+    position: relative;
+  
+    padding: 50px 30px;}
+
+.layer{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(270deg,rgba(42, 86, 42, 0),rgba(42, 75, 38, 0.4) 80%,#182c18db);
+    opacity: 1;
+}
+
+
+
+.articleGrid{
+    display: grid;
+    grid-template:
+    "img h2" min-content
+    "img p" auto
+    "img btn" min-content
+    / 1fr minmax(34rem, 5fr);
+    justify-items: center;
+    grid-column-gap: 2rem;
+}
+
+.articleGrid div{grid-area:img;}
+.articleGrid p{grid-area:p;}
+.articleGrid h2{grid-area:h2;}
+.articleGrid a{grid-area:btn;}
+
+
+.investedarticleGrid{
+    display: grid;
+    grid-template:
+    "h2 img" min-content
+    "p img" auto
+    "btn img" min-content
+    / minmax(34rem, 5fr) 1fr;
+    justify-items: center;
+    grid-column-gap: 2rem;
+}
+
+.investedarticleGrid div{grid-area:img;}
+.investedarticleGrid p{grid-area:p;}
+.investedarticleGrid h2{grid-area:h2;}
+.investedarticleGrid a{grid-area:btn;}
+
+
+.homeArticle{
+    margin: 15rem 0;
+    background-color: #ffffffab;
+}
+
+
+.homeArticle img{
+margin: auto;
+border-radius: 10px;
+} 
+
+.homeArticle p{
+    width: 80%;
+    font-size: 2rem;
+    text-align: justify;
+}
+.homeArticle a, .homeArticle h2{
+    align-self: center
+}
+
+
+.btn{ 
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: white;
+    background-color: rgb(102, 24, 176);
+    padding: 1.5rem;
+    /*border-radius: 10px;*/
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);    
+}
+
+.sponsorTitle{
+    color: black ;
+    font-size: 30px;
+    margin: 5rem;
+    text-align: center;
+}
+
+.containerSponsors{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 10rem;
+}
+
+
+.footerGrid{
+    display: grid;
+    grid-template:
+    "info . ." 18rem
+    "info socialM copy" auto
+    / 1fr 6fr 1fr ;
+    justify-items: center;
+    row-gap: 3rem;
+}
+
+.infoFooter{
+    grid-area: info;
+}
+
+.copyFooter{
+    grid-area: copy;
+    font-size: 1.5rem;
+}
+
+.footerRedes{
+    grid-area: socialM;
+    width: 100%;
+}
+
+footer{
+    /*background-image: url("../assets/images/wavee.png");*/
+    background: radial-gradient(#91aa94ba, #629668ba);
+    /*height: 300px;*/
+    color:rgb(0, 0, 0);
+}
+
+
+.infoFooter{
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: start;
+    margin-top: 2rem ;
+}
+
+.aContact{
+    color:white;
+}
+
+
+.footerRedes ul{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/******************** Adoption page*******************/
+
+.alternativeCatSelector, .alternativeDogSelector{
+    display: none;
+}
+
+.mainGridAdoptions{
+    display: grid;
+    grid-template-areas:
+    "banner"
+    "info"  
+    "selector"
+    "cards ";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,auto);
+    justify-items: center;
+}
+
+.parallax{grid-area: banner;}
+.introductionDiv{
+    grid-area: info;
+    width: 100%;
+}
+.animalSelector{grid-area: selector;}
+.adoptionCards{grid-area: cards;}
+
+
+
+.parallaxAdoptions{
+    background-image: url("../assets/images/bannerAdoptions-min.jpg");
+}
+
+.animalSelector{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.catSelector, .dogSelector{
+    max-width: 700px;
+    margin: 5rem;
+    text-align: center;
+}
+
+
+.catSelector h2, .dogSelector h2{
+    background-color: rgba(78, 78, 78, 0.302);
+    width: 700px;
+    border: 1px solid black;
+}
+
+.adoptionCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.adoptionCard{
+    margin: 30px 50px;
+    padding: 50px;
+    border: 1px solid #62966844;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    background-color: #62966844;
+    box-shadow: 20px 20px 50px grey;
+    transition: all 1s;
+}
+
+.adoptionCard:hover{
+    transform: scale(1.1, 1.1)
+}
+
+.animalPhoto{
+    border-radius: 20px 20px 0px 0px;
+    border: 1px solid #62966844;
+    height: 300px;
+}
+
+.animalName{
+    background-color: rgba(255, 255, 255, 0.412);
+    border-radius: 10px;
+    text-decoration: dotted ;
+}
+
+
+/******************** Help page*******************/
+
+.mainGridHelp{
+    display: grid;
+    grid-template:
+    "banner banner banner" auto
+    "info info info" auto 
+    ". articles ." auto
+    / 1fr 6fr 1fr;
+    justify-items: stretch;
+}
+
+.parallaxHelp{
+    grid-area: banner;
+    background-image: url("../assets/images/bannerHelp-min.jpg");
+}
+
+.helpArticlesSection{
+    grid-area: articles;
+    margin-top: 5rem;
+}
+
+.helpArticle{
+    display: grid;
+    grid-template: 
+    "title img" min-content
+    "info img" auto
+    "btn img" min-content
+    / minmax(34rem, 5fr) 1fr;
+    justify-items: center;
+    grid-column-gap: 2rem;
+    margin: 5rem 0;
+    text-align: center;
+}
+
+.helpArticle h2{
+    grid-area: title;
+    align-self: flex-start;
+}
+
+.helpArticle p{
+    grid-area: info;
+    width: 80%;
+    font-size: 1.8rem;
+    text-align: justify;
+}
+
+.helpArticle a{grid-area: btn;}
+
+.helpArticle div{
+    grid-area: img;
+    margin: auto;
+}
+
+.helpArticle a{
+    align-self: center;
+}
+
+
+
+/******************** Contact page*******************/
+
+.parallaxContact{
+    background-image: url("../assets/images/bannerContacto-min.jpg");
+}
+
+.mainGridContact{
+    display: grid;
+    grid-template:
+    "banner banner banner banner" auto
+    "info info info info" auto 
+    ". mail additionalInfo ." auto
+    ". mail map ." auto
+    "socialMedia socialMedia socialMedia socialMedia" auto
+    / 1fr 3fr 3fr 1fr;
+    justify-items: center;
+    grid-column-gap: 2rem;
+}
+
+.parallaxContact{
+    grid-area: banner;
+    background-image: url("../assets/images/bannerContacto-min.jpg");
+}
+
+.formMail{
+    grid-area: mail;
+    background-color: #98833228;
+    text-align: center;
+    margin: 3rem 0;
+}
+.contactInfo{
+    grid-area:additionalInfo;
+    width: 100%;
+    background-color: #98833228;
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 3rem 0;
+}
+
+.map{
+    width: 100%;
+    grid-area: map;
+    margin-bottom: 3rem;
+}
+
+.contactSocialMedia{
+    grid-area:socialMedia;
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+.formInput{
+    width: 90%;
+    height: 5rem;
+    margin: 1rem 3rem;
+    font-size: 2rem;
+    background-color: #98843200;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+
+textarea{
+    width: 90%;
+    margin: 1rem 3rem;
+    font-size: 2rem;
+    background-color: #98843200;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+
+span{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.contactInfo h2{
+    text-align: center;
+}
+
+.contactInfoMail, .contactInfoAdress{
+    text-align: left;
+    padding: 1rem;
+}
+.spanConsultasMail, .spanSociosMail{
+    text-align: left;
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+.contactSocialMedia a{
+    padding: 2rem;
+    
+}
+
+/******************** Donation page*******************/
+
+
+.mainGridDonations{
+    display: grid;
+    grid-template:
+    "banner" auto
+    "info" auto 
+    "title1"auto
+    "paymentMethod1"auto
+    "title2" auto
+    "paymentMethod2" auto
+    "greetings" auto;
+    justify-items: center;
+    grid-column-gap: 2rem;
+}
+
+.mpH2{grid-area:title1}
+.trasnferH2{grid-area: title2}
+
+.parallaxDonations{
+    grid-area: banner;
+    background-image: url("../assets/images/bannerDonations-min.jpg");
+}
+
+.mercadoPagoSection{
+    grid-area: paymentMethod1;
+    display: grid;
+    grid-template: 
+    "mpButtons" auto
+    "secondaryMp"auto;
+    justify-items: center;
+    border: 2px gray solid;
+    border-radius: 15px;
+    background-color: #ebddf2;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.paymentMethod{
+    grid-area:paymentMethod2;
+    border: 2px gray solid;
+    border-radius: 15px;
+    background-color: #ebddf2;
+    text-align: center;
+    padding: 2rem;
+    text-align: start;
+}
+
+.mpPrimaryPaymentMethod{
+    grid-area: mpButtons;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mpSecondaryPaymentMethod{
+    grid-area: secondaryMp;
+    margin: 2rem;
+    text-align: left;
+}
+
+.h2Payment{
+    text-align: center;
+    margin: 2rem;
+}
+
+.mpItem{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 5rem;
+}
+
+.mpSecondaryPaymentMethod p, .paymentMethod p{
+    font-size: 2rem;
+}
+
+.cvu, .alias, .cbu, .ctaCorr{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.finalGreetings{
+    grid-area: greetings;
+    margin-top: 5rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+
+/****************************************************************/
+/********************************MOBILE**************************/
+/****************************************************************/
+
+
+/* Mobile (horizontal)*/
+@media only screen and (max-width: 768px){
+    
+/*HOME*/
+
+    html{
+        font-size: 50%;
+    }
+    /*Header*/
+    header{
+        justify-content: space-between;
+    }
+
+   nav{
+    order: 2;
+   }
+
+   ul{
+    flex-wrap: wrap;
+   }
+
+
+    /*Main*/
+
+   .parallax{
+    display: none;
+   }
+
+    .mainGridHome{
+        display: grid;
+        grid-template:
+        "info" auto 
+        "articles" auto
+        "sponsors" auto 
+        / 1fr;
+      
+    }
+
+
+    .homeArticle div{
+        width: 90%;
+        display: flex;
+
+    }
+    .homeArticle div img{
+        width: 80%;
+        margin: auto;
+        border-radius: 10px;
+    }
+    .homeArticle{
+        margin: 3rem auto  ;
+        width: 90%;
+        background-color: #ffffffab;
+        display: grid;
+        grid-template:
+        "img" auto
+        "h2" min-content
+        "p" auto
+        "btn" min-content
+        / 1fr;
+        justify-items: center;
+        grid-row-gap: 2rem;
+    }
+
+    .containerSponsors{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        gap: 4rem;
+        margin-bottom: 10rem;
+    }
+
+
+    .footerGrid{
+        display: grid;
+        grid-template:
+        "info" auto
+        "socialM" auto
+        "copy" auto
+        / 1fr;
+        justify-items: center;
+        row-gap: 3rem;
+    }
+
+    .infoFooter ul{
+        text-align: center;
+    }
+
+    .footerRedes ul{
+        justify-content: center;
+    }
+    .footerRedes ul li{
+        padding: 0;
+        margin: 2rem;
+    }
+
+
+/*Adoptions*/
+    
+    .catSelector, .dogSelector{
+        display: none;
+    }
+
+    .animalSelector{
+        width: 90%;
+        justify-content: space-evenly;
+    }
+    
+   
+    .alternativeCatSelector, .alternativeDogSelector{
+        display: block;
+    }
+
+    .alternativeCatSelector img, .alternativeDogSelector img{
+        width: 90%;
+    }
+
+    .alternativeCatSelector h2, .alternativeDogSelector h2{
+        text-align: center;
+    }
+
+    .animalSelector{
+        flex-wrap: nowrap;
+    }
+
+/*Help*/
+
+    .helpArticle{
+        margin: 3rem auto  ;
+        width: 90%;
+        background-color: #ffffffab;
+        display: grid;
+        grid-template:
+        "img" auto
+        "title" min-content
+        "info" auto
+        "btn" min-content
+        / 1fr;
+        justify-items: center;
+        grid-row-gap: 2rem;
+    }
+
+    .helpArticle div{
+        width: 90%;
+        display: flex;
+
+    }
+    .helpArticle div img{
+        width: 80%;
+        margin: auto;
+        border-radius: 10px;
+    }
+    
+/*Contact*/
+    .mainGridContact{
+        display: grid;
+        grid-template:
+        "info info info" auto 
+        ". mail . " auto
+        ". additionalInfo ." auto
+        ". map ." auto
+        ". socialMedia ." auto;
+        justify-items: center;
+        row-gap: 2rem;
+    }
+
+}
+/* MOBILE (vertical)*/
+@media only screen and (max-width: 320px){
+/* HOME*/
+    header{
+        grid-area: header;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    h1{
+        font-size: 3rem;
+    }
+
+
+    .homeIntrodcutionText{
+        display: none;
+    }
+    .alternativeIntroductionText{
+        display: block;
+        font-size: 2rem;
+        text-indent: 3rem;
+        text-align:justify;
+        padding: 2rem 4rem;
+    }
+
+    .mainGridHome{
+        justify-items: stretch;
+    }
+
+}
+

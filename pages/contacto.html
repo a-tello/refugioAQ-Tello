@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assets/images/adopciones-plantilla.ico">
+    <title>Adopciones Quilmes</title>
+</head>
+<body>
+    <div class="bodyGrid">
+        <header>
+            <div class="divLogo">
+                <a href="#"><img src="../assets/images/aqlogo.png" alt="Adopciones Quilmes logo"></a>
+                </div>
+                <nav>
+                    <ul class="navBarList">
+                        <li><a href="../index.html">INICIO</a></li>
+                        <li><a href="./adopciones.html">ADOPCIONES</a></li>
+                        <ul>
+                            <li>Gatos</li>
+                            <li>Perros</li>
+                            <li>Requisitos para adopción</li>
+                        </ul>
+                        <li><a href="./ayuda.html">AYUDA</a></li>
+                        <ul>
+                            <li>Socios</li>
+                            <li>Traslados Solidario</li>
+                            <li>Venta de Garage</li>
+                            <li>Necesidades</li>
+                        </ul>
+                        <li><a href="#">CONTACTO</a></li>
+                    </ul>
+                </nav>
+                <a href="./donaciones.html" class="donationBtn">
+                    <img src="../assets/images/pawbtn.gif" alt="">
+                    DONAR
+                </a>
+        </header>
+        <main class="mainGridContact">
+            <section class="parallax parallaxContact">
+                <div class="layer"></div>
+            </section>
+            <div class="introductionDiv">
+                <h1>CONTACTO</h1>
+                <p class="introdcutionText">¿Tenés alguna consulta? Elegí la manera de contactarnos que mas prefieras</p>
+            </div>
+            <form action="" class="formMail">
+                <label for="Nombre" hidden>Nombre:</label>
+                <input type="text" name="Nombre" placeholder="Nombre*" class="formInput">
+                <label for="Telefono" hidden>Telefono:</label>
+                <input type="tel" name="Telefono" placeholder="Telefono*" class="formInput">
+                <label for="Email" hidden>Email:</label>
+                <input type="email" name="Email" placeholder="Email*" class="formInput">
+                <select class="formInput">
+                    <option selected disabled>Motivo*</option>
+                    <option value="donaciones">Donaciones</option>
+                    <option value="socios">Socios</option>
+                    <option value="traslado">Traslado</option>
+                    <option value="adopciones">Adopciones</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                <input type="submit" value="Enviar mensaje" class="btn">
+            </form> 
+            <div class="contactInfo">
+                <div class="contactInfoMail">
+                    <h2>Emails</h2>
+                    <p><span>Consultas:</span> xxxxx@xxxxxx.com</p>
+                    <p><span>Socios:</span> xxxxxxxx@xxxxxx.com</p>
+                </div>
+                <div class="contactInfoAdress">
+                    <h2>Dirección</h2>
+                    <p>xxxxxxxx xxxx, Quilmes, Buenos Aires, Argentina</p>
+                </div>
+            </div>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26234.647596634837!2d-58.23294636047127!3d-34.722051444780185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x253544f047baecad!2sAdopciones%20Quilmes!5e0!3m2!1ses!2sar!4v1659050620079!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contactSocialMedia">
+                <p>Contactanos en nuestras redes</p>
+                <a href="https://twitter.com" target="_blank"><img src="../assets/images/tw50.png" alt="AQ logo twitter"></a>
+                <a href="https://instagram.com" target="_blank"><img src="../assets/images/ig50.png" alt="AQ logo instagram"></a>
+                <a href="https://facebook.com" target="_blank"><img src="../assets/images/fb50.png" alt="AQ logo facebook"></a>
+            </div>
+        </main>
+        <footer class="footerGrid">
+            <div class="infoFooter">
+                <ul>
+                    <li><a class="aContact" href="#">Contacto</a></li>
+                    <li>FAQs</li>
+                    <li>Ayudanos</li>
+                    <li>¿Cómo adoptar?</li>
+                </ul>
+            </div>
+            <div class="footerRedes">
+                <ul>
+                    <li><a href="https://twitter.com/AdopcionesQ" target="_blank"><img src="../assets/images/twlogo.png" alt="AQ logo twitter"></a></li>
+                    <li><a href="https://www.instagram.com/adopcionesquilmes" target="_blank"><img src="../assets/images/iglogo.png" alt="AQ logo instagram"></a></li>
+                    <li><a href="https://es-la.facebook.com/AdopcionesQuilmes/" target="_blank"><img src="../assets/images/fblogo.png" alt="AQ logo facebook"></a></li>
+                </ul>
+            </div>
+            <div class="copyFooter">
+                <p>© Adopciones Quilmes 2022</p> 
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
