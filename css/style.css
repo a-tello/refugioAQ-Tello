@@ -6,8 +6,6 @@
 
 main{
     background-color: #ffffff;
-    opacity: 0.8;
-    /* background: repeating-linear-gradient( -45deg, rgba(96, 135, 87, 0.37), rgba(96, 135, 87, 0.37) 15px, #ffffff 15px, #ffffff 75px ); */
  }
 
 
@@ -93,10 +91,18 @@ footer{grid-area: footer;}
     font-weight: bold;
     padding-left: 4rem;
 }
+
+
 .donationBtn img{
     position: absolute;
     margin-left: -3.5rem;
     margin-top: -.5rem;
+    max-width: 30px;
+    max-height: 30px;
+    animation-name: paw_movement;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
 }
 
 .hamburguerMenu{
@@ -231,10 +237,13 @@ border-radius: 10px;
     font-weight: bold;
     font-size: 1.7rem;
     color: white;
-    background-color: rgb(102, 24, 176);
+    background-color: rgb(132, 72, 187);
     padding: 1.5rem;
     /*border-radius: 10px;*/
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);    
+}
+.btn:hover{ 
+    background-color: rgb(91, 31, 148);
 }
 
 .sponsorTitle{
@@ -344,6 +353,8 @@ footer{
     justify-content: center;
 }
 .catSelector, .dogSelector{
+    display: flex;
+    flex-direction: column;
     max-width: 700px;
     margin: 5rem;
     text-align: center;
@@ -363,32 +374,44 @@ footer{
 }
 
 .adoptionCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 30px 50px;
-    padding: 50px;
-    border: 1px solid #62966844;
+    max-height: 350px;
+    padding: 10px;
+    /* border: 1px solid #62966844; */
     font-weight: bold;
     font-size: 30px;
     text-align: center;
-    background-color: #62966844;
-    box-shadow: 20px 20px 50px grey;
-    transition: all 1s;
+    /* background-color: #62966844; */
+    /* box-shadow: 20px 20px 50px grey; */
+    transition: all .5s;
 }
 
-.adoptionCard:hover{
-    transform: scale(1.1, 1.1)
+.animalName{
+    background-color: #629668;
+    color:white;
+    border-radius: 0 0 20px 20px;
+}
+
+.adoptionCards:hover .adoptionCard{
+    filter: blur(1px);
+    opacity: .5;
+} 
+
+.adoptionCards .adoptionCard:hover{
+    transform: scale(1.1, 1.1);
+    opacity: 1;
+    filter: blur(0px);
 }
 
 .animalPhoto{
     border-radius: 20px 20px 0px 0px;
-    border: 1px solid #62966844;
-    height: 300px;
+    /*border: 1px solid #62966844;*/
+    height: 300px; 
 }
 
-.animalName{
-    background-color: rgba(255, 255, 255, 0.412);
-    border-radius: 10px;
-    text-decoration: dotted ;
-}
 
 
 /******************** Help page*******************/
@@ -664,6 +687,11 @@ span{
     flex-wrap: wrap;
    }
 
+   .donationBtn img{
+        max-width: 25px;
+        max-height: 25px;
+    
+    }
 
     /*Main*/
 
@@ -842,3 +870,8 @@ span{
 
 }
 
+/***********************/
+@keyframes paw_movement{
+    20%{transform: rotate(-45deg);}
+    40%{transform: rotate(45deg);}
+}

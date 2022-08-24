@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../assets/images/adopciones-plantilla.ico">
     <title>Adopciones Quilmes</title>
@@ -16,30 +17,30 @@
         <header>
             <div class="divLogo">
                 <a href="#"><img src="../assets/images/aqlogo.png" alt="Adopciones Quilmes logo"></a>
-                </div>
-                <nav>
-                    <ul class="navBarList">
-                        <li><a href="../index.html">INICIO</a></li>
-                        <li><a href="./adopciones.html">ADOPCIONES</a></li>
-                        <ul>
-                            <li>Gatos</li>
-                            <li>Perros</li>
-                            <li>Requisitos para adopción</li>
-                        </ul>
-                        <li><a href="./ayuda.html">AYUDA</a></li>
-                        <ul>
-                            <li>Socios</li>
-                            <li>Traslados Solidario</li>
-                            <li>Venta de Garage</li>
-                            <li>Necesidades</li>
-                        </ul>
-                        <li><a href="#">CONTACTO</a></li>
+            </div>
+            <nav>
+                <ul class="navBarList">
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="./adopciones.html">ADOPCIONES</a></li>
+                    <ul>
+                        <li>Gatos</li>
+                        <li>Perros</li>
+                        <li>Requisitos para adopción</li>
                     </ul>
-                </nav>
-                <a href="./donaciones.html" class="donationBtn">
-                    <img src="../assets/images/pawbtn.gif" alt="">
-                    DONAR
-                </a>
+                    <li><a href="./ayuda.html">AYUDA</a></li>
+                    <ul>
+                        <li>Socios</li>
+                        <li>Traslados Solidario</li>
+                        <li>Venta de Garage</li>
+                        <li>Necesidades</li>
+                    </ul>
+                    <li><a href="#">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <a href="./donaciones.html" class="donationBtn">
+                <img src="../assets/images/white_paw.png" alt="">
+                DONAR
+            </a>
         </header>
         <main class="mainGridContact">
             <section class="parallax parallaxContact">
@@ -49,7 +50,7 @@
                 <h1>CONTACTO</h1>
                 <p class="introdcutionText">¿Tenés alguna consulta? Elegí la manera de contactarnos que mas prefieras</p>
             </div>
-            <form action="" class="formMail">
+            <form action="" class="formMail" data-aos="fade-right">
                 <label for="Nombre" hidden>Nombre:</label>
                 <input type="text" name="Nombre" placeholder="Nombre*" class="formInput">
                 <label for="Telefono" hidden>Telefono:</label>
@@ -67,7 +68,7 @@
                 <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
                 <input type="submit" value="Enviar mensaje" class="btn">
             </form> 
-            <div class="contactInfo">
+            <div class="contactInfo" data-aos="fade-left">
                 <div class="contactInfoMail">
                     <h2>Emails</h2>
                     <p><span>Consultas:</span> xxxxx@xxxxxx.com</p>
@@ -78,7 +79,7 @@
                     <p>xxxxxxxx xxxx, Quilmes, Buenos Aires, Argentina</p>
                 </div>
             </div>
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26234.647596634837!2d-58.23294636047127!3d-34.722051444780185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x253544f047baecad!2sAdopciones%20Quilmes!5e0!3m2!1ses!2sar!4v1659050620079!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26234.647596634837!2d-58.23294636047127!3d-34.722051444780185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x253544f047baecad!2sAdopciones%20Quilmes!5e0!3m2!1ses!2sar!4v1659050620079!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-aos="fade-left"></iframe>
             <div class="contactSocialMedia">
                 <p>Contactanos en nuestras redes</p>
                 <a href="https://twitter.com" target="_blank"><img src="../assets/images/tw50.png" alt="AQ logo twitter"></a>
@@ -107,5 +108,9 @@
             </div>
         </footer>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

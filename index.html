@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/images/adopciones-plantilla.ico">
     <title>Adopciones Quilmes</title>
@@ -36,8 +37,8 @@
                     <li><a href="pages/contacto.html">CONTACTO</a></li>
                 </ul>
             </nav>
-            <a href="pages/donaciones.html" class="donationBtn">
-                <img src="./assets/images/pawbtn.gif" alt="">
+            <a href="./pages/donaciones.html" class="donationBtn">
+                <img src="./assets/images/white_paw.png" alt="">
                 DONAR
             </a>
         </header>
@@ -52,7 +53,7 @@
 
             </div>
             <section class="articlesSection">
-                <article class="homeArticle articleGrid ">
+                <article class="homeArticle articleGrid" data-aos="fade-right">
                     <div>
                         <img src="./assets/images/adopciones2.png" alt="Adopciones Quilmes">
                     </div>
@@ -60,7 +61,7 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas quam voluptate vero officiis esse illo illum minima ad nisi distinctio sequi sapiente mollitia, culpa eaque enim error iure odit aut assumenda provident? Qui ducimus iure doloribus perspiciatis dicta, dolores eligendi rem enim! Voluptate beatae et porro odit modi, eligendi cumque!</p>
                     <a class="btn" href="pages/adopciones.html">Quiero Adoptar</a>
                 </article>
-                <article class="homeArticle investedarticleGrid">
+                <article class="homeArticle investedarticleGrid" data-aos="fade-left">
                     <h2>Contacto</h2>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas quam voluptate vero officiis esse illo illum minima ad nisi distinctio sequi sapiente mollitia, culpa eaque enim error iure odit aut assumenda provident? Qui ducimus iure doloribus perspiciatis dicta, dolores eligendi rem enim! Voluptate beatae et porro odit modi, eligendi cumque!</p>
                     <a class="btn" href="pages/contacto.html">Contactanos</a>
@@ -68,7 +69,7 @@
                         <img src="./assets/images/contacto2.jpg" alt="Adopciones Quilmes">
                     </div>
                 </article>
-                <article class="homeArticle articleGrid">
+                <article class="homeArticle articleGrid" data-aos="fade-right">
                     <div>
                         <img src="./assets/images/ayuda2.png" alt="Adopciones Quilmes">
                     </div>
@@ -107,6 +108,10 @@
             </div>
         </footer>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
 
