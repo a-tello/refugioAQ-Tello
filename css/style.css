@@ -5,13 +5,12 @@
 }
 
 main{
-    background-color: #ffffff;
+    background-color: #eee;
  }
 
 
 html{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: lighter;
+    font-family: 'Quicksand', sans-serif;
     font-size: 62.5%;
 }
 
@@ -41,7 +40,14 @@ h2{
     font-size: 3rem;
 }
 
+.divLogo img{
+    width: 120px;
+    height: 120px;
+}
 
+textarea{
+    resize: none;
+}
 /* BODY GRID*/
 
 .bodyGrid{
@@ -140,7 +146,7 @@ footer{grid-area: footer;}
 
 .introdcutionText, .homeIntrodcutionText{
     text-indent: 3rem;
-    text-align:justify;
+    text-align:center;
     padding: 2rem 4rem;
 }
 
@@ -264,15 +270,23 @@ border-radius: 10px;
 .footerGrid{
     display: grid;
     grid-template:
-    "info . ." 18rem
-    "info socialM copy" auto
-    / 1fr 6fr 1fr ;
+    "info" auto
+    "socialM" auto
+    "copy" auto
+    / 1fr;
     justify-items: center;
     row-gap: 3rem;
 }
 
 .infoFooter{
     grid-area: info;
+}
+
+.infoFooter li{
+    transition: all 1s;
+}
+.infoFooter li:hover{
+    background-color: #39593d;
 }
 
 .copyFooter{
@@ -285,27 +299,42 @@ border-radius: 10px;
     width: 100%;
 }
 
-footer{
-    /*background-image: url("../assets/images/wavee.png");*/
-    background: radial-gradient(#91aa94ba, #629668ba);
-    /*height: 300px;*/
-    color:rgb(0, 0, 0);
+.footerRedes li:hover{
+    animation-name: levitate ;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.footerRedes li:hover .twFooter{
+    filter: drop-shadow(0px 0px 10px rgb(62, 123, 183));
+}
+.footerRedes li:hover .fbFooter{
+    filter: drop-shadow(0px 0px 10px rgb(5, 16, 134));
+}
+.footerRedes li:hover .igFooter{
+    filter: drop-shadow(0px 0px 10px rgb(93, 6, 114));
 }
 
 
+footer{
+    background: radial-gradient(#91aa94ba, #629668ba);
+    color:rgb(0, 0, 0);
+}
+
 .infoFooter{
+    height: auto;
+}
+
+.infoFooter ul{
     color:white;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-self: start;
     margin-top: 2rem ;
 }
 
 .aContact{
     color:white;
 }
-
 
 .footerRedes ul{
     display: flex;
@@ -488,7 +517,7 @@ footer{
     ". mail additionalInfo ." auto
     ". mail map ." auto
     "socialMedia socialMedia socialMedia socialMedia" auto
-    / 1fr 3fr 3fr 1fr;
+    / 1fr 4fr 2fr 1fr;
     justify-items: center;
     grid-column-gap: 2rem;
 }
@@ -500,14 +529,13 @@ footer{
 
 .formMail{
     grid-area: mail;
-    background-color: #98833228;
     text-align: center;
     margin: 3rem 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.303);
 }
 .contactInfo{
     grid-area:additionalInfo;
     width: 100%;
-    background-color: #98833228;
     text-align: center;
     font-size: 1.8rem;
     margin: 3rem 0;
@@ -517,6 +545,19 @@ footer{
     width: 100%;
     grid-area: map;
     margin-bottom: 3rem;
+}
+
+.contactInfo{
+    text-align: left;
+}
+
+.contactInfo h2{
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.contactInfoMail a{
+    display: block;
 }
 
 .contactSocialMedia{
@@ -554,10 +595,6 @@ span{
     text-align: center;
 }
 
-.contactInfoMail, .contactInfoAdress{
-    text-align: left;
-    padding: 1rem;
-}
 .spanConsultasMail, .spanSociosMail{
     text-align: left;
     font-weight: bold;
@@ -591,16 +628,14 @@ span{
 
 .parallaxDonations{
     grid-area: banner;
-    background-image: url("../assets/images/bannerDonations-min.jpg");
+    background-image: url("../assets/images/bannerDonations-min.png");
 }
 
 .mercadoPagoSection{
     grid-area: paymentMethod1;
-    display: grid;
-    grid-template: 
-    "mpButtons" auto
-    "secondaryMp"auto;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     border: 2px gray solid;
     border-radius: 15px;
     background-color: #ebddf2;
@@ -619,17 +654,21 @@ span{
     text-align: start;
 }
 
+.paymentMethod p{
+    padding: 1rem;
+}
+
 .mpPrimaryPaymentMethod{
-    grid-area: mpButtons;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 70%;
 }
 
 .mpSecondaryPaymentMethod{
-    grid-area: secondaryMp;
-    margin: 2rem;
+    padding: 2rem;
     text-align: left;
+    align-self: center;
 }
 
 .h2Payment{
@@ -649,7 +688,6 @@ span{
 }
 
 .cvu, .alias, .cbu, .ctaCorr{
-    text-decoration: underline;
     font-weight: bold;
 }
 .finalGreetings{
@@ -757,6 +795,7 @@ span{
 
     .infoFooter ul{
         text-align: center;
+        flex-direction: column;
     }
 
     .footerRedes ul{
@@ -832,7 +871,8 @@ span{
         ". mail . " auto
         ". additionalInfo ." auto
         ". map ." auto
-        ". socialMedia ." auto;
+        ". socialMedia ." auto
+        /1fr 5fr 1fr;
         justify-items: center;
         row-gap: 2rem;
     }
@@ -874,4 +914,8 @@ span{
 @keyframes paw_movement{
     20%{transform: rotate(-45deg);}
     40%{transform: rotate(45deg);}
+}
+@keyframes levitate{
+    40%, 80%{transform:translateY(0)}
+    20%, 60%{transform:translateY(-10px)}
 }
